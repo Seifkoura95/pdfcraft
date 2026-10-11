@@ -97,7 +97,22 @@ pub mod updates;
 mod wheel_pager;
 mod widgets;
 
+#[cfg(target_arch = "wasm32")]
+pub mod web_hooks;
+#[cfg(target_arch = "wasm32")]
+pub use web_hooks::{WebHooks, set_web_hooks};
+
 use pdfcraft_engine::{DocId, Session};
+
+/// The name shown to the user in titles, notices and the About dialog.
+/// The `simplehub` feature builds the app as Simple PDF inside SimpleHub.
+pub const APP_NAME: &str = if cfg!(feature = "simplehub") { "Simple PDF" } else { "PdfCraft" };
+
+/// A translated UI string with the product name filled in: the catalogs are keyed by the English
+/// text, which names PdfCraft, so the name is swapped after translation rather than in the key.
+pub(crate) fn brand(s: &str) -> String {
+    if APP_NAME == "PdfCraft" { s.to_owned() } else { s.replace("PdfCraft", APP_NAME) }
+}
 
 pub use canvas::DocView;
 pub use editing::{CloseRequest, SaveTarget};
@@ -1001,6 +1016,10 @@ impl PdfCraftApp {
         // Browsers pick files asynchronously; the bytes arrive through `inbox`.
         #[cfg(target_arch = "wasm32")]
         {
+            // A hosting page (SimpleHub) may supply the file itself.
+            if web_hooks::open(self.inbox.clone(), self.ctx.clone()) {
+                return;
+            }
             let inbox = self.inbox.clone();
             let ctx = self.ctx.clone();
             wasm_bindgen_futures::spawn_local(async move {
@@ -1096,7 +1115,7 @@ impl PdfCraftApp {
 
     /// Notify with a static message in the UI language.
     pub fn notify_tr(&mut self, text: &str) {
-        self.notify(tl!(text).to_string());
+        self.notify(brand(tl!(text)));
     }
 
     /// Notify with an error's own text. Engine and OS messages are not translated: matching their
@@ -1107,7 +1126,7 @@ impl PdfCraftApp {
 
     /// Notify with a `{name}`-style template in the UI language (placeholders filled once).
     pub fn notify_fmt(&mut self, template: &str, args: &[(&str, &str)]) {
-        self.notify(i18n::fmt(tl!(template), args));
+        self.notify(i18n::fmt(&brand(tl!(template)), args));
     }
 
     pub fn set_theme_preference(&mut self, preference: ThemePreference) {
@@ -1686,8 +1705,9 @@ impl eframe::App for PdfCraftApp {
             .and_then(|i| self.session.get(self.views[i].id))
             .map(|d| d.display_name())
             .or_else(|| self.combine_showing().then(|| tl!("Combine files").to_owned()))
-            .map_or_else(|| "PdfCraft".to_owned(), |name| format!("{name} — PdfCraft"));
-        if title != self.window_title {
+            .map_or_else(|| APP_NAME.to_owned(), |name| format!("{name} — {APP_NAME}"));
+        // Inside SimpleHub the page owns its title.
+        if title != self.window_title && !cfg!(feature = "simplehub") {
             ctx.send_viewport_cmd(egui::ViewportCommand::Title(title.clone()));
             self.window_title = title;
         }

@@ -982,7 +982,7 @@ pub fn show(app: &mut PdfCraftApp, ctx: &egui::Context) {
                     ui.label(egui::RichText::new(tl!("Recover unsaved documents?")).font(theme::semibold(18.0)));
                 });
                 ui.add_space(6.0);
-                ui.label(tl!("PdfCraft didn't shut down normally. These documents had changes that were autosaved:"));
+                ui.label(crate::brand(tl!("PdfCraft didn't shut down normally. These documents had changes that were autosaved:")));
                 ui.add_space(8.0);
                 let now = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).map(|d| d.as_secs()).unwrap_or(0);
                 egui::Grid::new("recoverable").num_columns(2).spacing([18.0, 6.0]).show(ui, |ui| {
@@ -1057,6 +1057,22 @@ pub fn show(app: &mut PdfCraftApp, ctx: &egui::Context) {
                 match tab {
                     1 => crate::credits::contributors_ui(ui),
                     2 => crate::credits::models_ui(ui),
+                    _ if cfg!(feature = "simplehub") => {
+                        // SimpleHub build. PdfCraft is MIT OR Apache-2.0; the licence asks for
+                        // attribution and the ArtCraft marks are left out (they are not open source).
+                        ui.label(egui::RichText::new(crate::APP_NAME).font(theme::semibold(20.0)));
+                        ui.label(crate::i18n::fmt(tl!("Version {v}"), &[("v", env!("CARGO_PKG_VERSION"))]));
+                        ui.add_space(6.0);
+                        ui.label("PDF tools for SimpleHub: view, comment, fill, sign, organise pages, redact and export.");
+                        ui.add_space(6.0);
+                        ui.label(
+                            egui::RichText::new(
+                                "Built on PdfCraft, an open source PDF tool by the ArtCraft Team and the PdfCraft contributors, used under the MIT or Apache 2.0 licence.",
+                            )
+                            .color(t.text_muted),
+                        );
+                        ui.hyperlink_to("github.com/storytold/pdfcraft", "https://github.com/storytold/pdfcraft");
+                    }
                     _ => {
                         ui.horizontal(|ui| {
                             widgets::artcraft_mark(ui, 40.0);

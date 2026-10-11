@@ -334,7 +334,11 @@ impl PdfCraftApp {
                     if let Some(doc) = self.session.get(id) {
                         self.views[index].document_changed(&doc.info);
                     }
-                    self.notify_fmt("Downloaded {name}", &[("name", &name)]);
+                    if crate::web_hooks::installed() {
+                        self.notify_fmt("Saved {name}", &[("name", &name)]);
+                    } else {
+                        self.notify_fmt("Downloaded {name}", &[("name", &name)]);
+                    }
                     after(self);
                     true
                 }
@@ -558,6 +562,10 @@ fn short_name(path: &str) -> String {
 #[cfg(target_arch = "wasm32")]
 pub(crate) fn download(name: &str, bytes: &[u8]) -> Result<(), String> {
     use wasm_bindgen::JsCast;
+    // A hosting page (SimpleHub) keeps the file itself.
+    if let Some(result) = crate::web_hooks::save(name, bytes) {
+        return result;
+    }
     let err = |e: wasm_bindgen::JsValue| format!("{e:?}");
     let array = js_sys::Uint8Array::from(bytes);
     let parts = js_sys::Array::of1(&array);

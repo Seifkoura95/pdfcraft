@@ -66,3 +66,7 @@ skrifa = "0.44"
 [build-dependencies]
 serde_json = { workspace = true }
 toml = "1"
+
+[features]
+# SimpleHub build: user-facing name "Simple PDF", About dialog credits PdfCraft.
+simplehub = []

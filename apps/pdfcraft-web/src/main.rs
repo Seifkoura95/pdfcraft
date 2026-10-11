@@ -3,7 +3,14 @@
 
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 
-#[cfg(target_arch = "wasm32")]
+#[cfg(all(target_arch = "wasm32", feature = "simplehub"))]
+mod simplehub;
+
+/// SimpleHub mounts the app itself through [`simplehub::start_simple_pdf`].
+#[cfg(all(target_arch = "wasm32", feature = "simplehub"))]
+fn main() {}
+
+#[cfg(all(target_arch = "wasm32", not(feature = "simplehub")))]
 fn main() {
     use eframe::wasm_bindgen::JsCast;
     use pdfcraft_ui_egui::PdfCraftApp;
@@ -61,13 +68,13 @@ fn main() {
     });
 }
 
-#[cfg(target_arch = "wasm32")]
+#[cfg(all(target_arch = "wasm32", not(feature = "simplehub")))]
 fn query_param(key: &str) -> Option<String> {
     let search = web_sys::window()?.location().search().ok()?;
     web_sys::UrlSearchParams::new_with_str(&search).ok()?.get(key)
 }
 
-#[cfg(target_arch = "wasm32")]
+#[cfg(all(target_arch = "wasm32", not(feature = "simplehub")))]
 async fn fetch_bytes(url: &str) -> Result<Vec<u8>, String> {
     use eframe::wasm_bindgen::JsCast;
     let window = web_sys::window().ok_or("no window")?;
