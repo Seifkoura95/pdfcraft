@@ -1071,6 +1071,12 @@ pub fn show(app: &mut PdfCraftApp, ctx: &egui::Context) {
                             )
                             .color(t.text_muted),
                         );
+                        ui.label(
+                            egui::RichText::new(
+                                "Not affiliated with or endorsed by Adobe, Microsoft, Autodesk or Avid. Other product names are trademarks of their respective owners.",
+                            )
+                            .color(t.text_muted),
+                        );
                         ui.hyperlink_to("github.com/storytold/pdfcraft", "https://github.com/storytold/pdfcraft");
                     }
                     _ => {

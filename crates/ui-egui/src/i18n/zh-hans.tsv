@@ -127,7 +127,7 @@
 	Fit to width	适合宽度
 	Display theme	显示主题
 	Side panels	侧边面板
-	Enable Acrobat JavaScript	启用 Acrobat JavaScript
+	Enable JavaScript	启用 JavaScript
 	OK	确定
 	Cancel	取消
 	Close	关闭
@@ -876,7 +876,7 @@
 	Document JavaScripts	文档 JavaScript
 	Script Name:	脚本名称：
 	This document has no document-level scripts.	本文档没有文档级脚本。
-	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	脚本在无文件和网络访问权限的沙盒中运行。关闭 JavaScript 后，Acrobat 的标准格式化、验证和计算函数仍可使用。
+	Scripts run in a sandbox without file or network access. With JavaScript off, the standard format, validate and calculate functions still work.	脚本在无文件和网络访问权限的沙盒中运行。关闭 JavaScript 后，标准格式化、验证和计算函数仍可使用。
 	No form fields were detected	未检测到表单域
 	Detected 1 form field	检测到 1 个表单域
 	Detected {n} form fields	检测到 {n} 个表单域
@@ -1258,10 +1258,10 @@
 	Weak	弱
 	Advanced Options {chevron}	高级选项 {chevron}
 	Compatibility	兼容性
-	Acrobat X and later (256-bit AES)	Acrobat X 及更高版本（256 位 AES）
-	Acrobat 7.0 and later (128-bit AES)	Acrobat 7.0 及更高版本（128 位 AES）
-	Acrobat 5.0 and later (128-bit RC4)	Acrobat 5.0 及更高版本（128 位 RC4）
-	Acrobat 3.0 and later (40-bit RC4)	Acrobat 3.0 及更高版本（40 位 RC4）
+	PDF 2.0 and later (256-bit AES)	PDF 2.0 及更高版本（256 位 AES）
+	PDF 1.6 and later (128-bit AES)	PDF 1.6 及更高版本（128 位 AES）
+	PDF 1.4 and later (128-bit RC4)	PDF 1.4 及更高版本（128 位 RC4）
+	PDF 1.1 and later (40-bit RC4)	PDF 1.1 及更高版本（40 位 RC4）
 	Encrypt	加密
 	All document contents	所有文档内容
 	All document contents except metadata	除元数据外的所有文档内容
@@ -1673,7 +1673,6 @@
 	At least one signature has problems.	至少一个签名存在问题。
 	This document is secured. Some changes are restricted by its security settings.	本文档已加密。其安全设置限制了部分更改。
 	This is a dynamic XFA form, which PdfCraft can't display yet. What you see is the file's placeholder page.	这是动态 XFA 表单，PdfCraft 暂无法显示。您看到的是文件的占位页面。
-	This form also contains XFA data, which PdfCraft doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	此表单还包含 XFA 数据，PdfCraft 暂不读取。您可以填写字段，但 Acrobat 可能显示 XFA 值。
 	This document contains {n} interactive form fields.	本文档包含 {n} 个交互式表单域。
 	This file was damaged and has been repaired. Saving keeps the repaired version.	此文件已损坏并已修复。保存将保留修复后的版本。
 	Dismiss	关闭
@@ -1914,7 +1913,7 @@
 	List	列表
 	Lock comment	锁定注释
 	Mark figure as decorative	将图形标记为装饰性内容
-	Microsoft Word (.docx)	Microsoft Word（.docx）
+	Document (.docx)	文档（.docx）
 	Move bookmark	移动书签
 	Move comment	移动注释
 	Move image	移动图像
@@ -1999,7 +1998,7 @@
 	Open link	打开链接
 	Open this web page?	是否打开此网页？
 	Page display: {layout}	页面显示：{layout}
-	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	脚本在沙盒中运行，无法访问文件或网络。脚本请求打开网页时，需要先获得您的许可。关闭 JavaScript 后，Acrobat 的标准格式、验证和计算函数仍可使用。
+	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, the standard format, validate and calculate functions still work.	脚本在沙盒中运行，无法访问文件或网络。脚本请求打开网页时，需要先获得您的许可。关闭 JavaScript 后，标准格式、验证和计算函数仍可使用。
 	Sign yourself	自行签名
 	Switch to two-page view first to show the cover page	请先切换到双页视图，才能显示封面页
 	Text recognition isn't installed: its models are missing (run `cargo xtask models`, or set PDFCRAFT_MODELS).	尚未安装文本识别功能：缺少模型（请运行 `cargo xtask models` 或设置 PDFCRAFT_MODELS）。

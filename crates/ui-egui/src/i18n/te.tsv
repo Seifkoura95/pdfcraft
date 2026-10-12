@@ -63,7 +63,7 @@ comment menu	Edit	సవరించు
 	Fit to width	వెడల్పుకు సరిపోయేలా
 	Display theme	ప్రదర్శన థీమ్
 	Side panels	సైడ్ ప్యానెల్‌లు
-	Enable Acrobat JavaScript	Acrobat JavaScriptను ప్రారంభించు
+	Enable JavaScript	JavaScriptను ప్రారంభించు
 	OK	సరే
 	Join our Discord	మా Discordలో చేరండి
 	Close	మూసివేయి
@@ -136,7 +136,7 @@ comment menu	Edit	సవరించు
 	Files you open in PdfCraft appear here. Drop a PDF anywhere to open it.	PdfCraftలో మీరు తెరిచే ఫైల్‌లు ఇక్కడ కనిపిస్తాయి. PDFను తెరవడానికి దాన్ని ఎక్కడైనా లాగి వదలండి.
 	Privacy	గోప్యత
 	PdfCraft works offline. No telemetry, no account, and no cloud processing unless you add a provider.	PdfCraft ఆఫ్‌లైన్‌లో పనిచేస్తుంది. టెలిమెట్రీ లేదు, ఖాతా అవసరం లేదు, మీరు ప్రొవైడర్‌ను జోడిస్తే తప్ప క్లౌడ్ ప్రాసెసింగ్ ఉండదు.
-	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	స్క్రిప్ట్‌లు ఫైల్ లేదా నెట్‌వర్క్ యాక్సెస్ లేని శాండ్‌బాక్స్‌లో నడుస్తాయి. JavaScript ఆఫ్‌లో ఉన్నా, Acrobat ప్రామాణిక ఫార్మాట్, ధృవీకరణ, గణన ఫంక్షన్‌లు పనిచేస్తాయి.
+	Scripts run in a sandbox without file or network access. With JavaScript off, the standard format, validate and calculate functions still work.	స్క్రిప్ట్‌లు ఫైల్ లేదా నెట్‌వర్క్ యాక్సెస్ లేని శాండ్‌బాక్స్‌లో నడుస్తాయి. JavaScript ఆఫ్‌లో ఉన్నా, ప్రామాణిక ఫార్మాట్, ధృవీకరణ, గణన ఫంక్షన్‌లు పనిచేస్తాయి.
 	Back to all tools	అన్ని సాధనాలకు తిరిగి వెళ్లు
 	Close panel	ప్యానెల్‌ను మూసివేయి
 	View less	తక్కువ చూపించు
@@ -276,7 +276,7 @@ comment menu	Edit	సవరించు
 	About PdfCraft	PdfCraft గురించి
 	Export a PDF	PDFను ఎగుమతి చేయి
 	Export to	ఎగుమతి ఫార్మాట్
-	Microsoft Word (.docx)	Microsoft Word పత్రం (.docx)
+	Document (.docx)	పత్రం (.docx)
 	Spreadsheet (.xlsx)	స్ప్రెడ్‌షీట్ (.xlsx)
 	Presentation (.pptx)	ప్రెజెంటేషన్ (.pptx)
 	Image (PNG)	చిత్రం (PNG)
@@ -1294,10 +1294,10 @@ signature pad	Type	టైప్ చేయి
 	Weak	బలహీనమైనది
 	Advanced Options {chevron}	అధునాతన ఎంపికలు {chevron}
 	Compatibility	అనుకూలత
-	Acrobat X and later (256-bit AES)	Acrobat X, తర్వాతి వెర్షన్‌లు (256-బిట్ AES)
-	Acrobat 7.0 and later (128-bit AES)	Acrobat 7.0, తర్వాతి వెర్షన్‌లు (128-బిట్ AES)
-	Acrobat 5.0 and later (128-bit RC4)	Acrobat 5.0, తర్వాతి వెర్షన్‌లు (128-బిట్ RC4)
-	Acrobat 3.0 and later (40-bit RC4)	Acrobat 3.0, తర్వాతి వెర్షన్‌లు (40-బిట్ RC4)
+	PDF 2.0 and later (256-bit AES)	PDF 2.0, తర్వాతి వెర్షన్‌లు (256-బిట్ AES)
+	PDF 1.6 and later (128-bit AES)	PDF 1.6, తర్వాతి వెర్షన్‌లు (128-బిట్ AES)
+	PDF 1.4 and later (128-bit RC4)	PDF 1.4, తర్వాతి వెర్షన్‌లు (128-బిట్ RC4)
+	PDF 1.1 and later (40-bit RC4)	PDF 1.1, తర్వాతి వెర్షన్‌లు (40-బిట్ RC4)
 	Encrypt	ఎన్‌క్రిప్ట్ చేయాల్సినవి
 	All document contents	పత్రంలోని మొత్తం కంటెంట్
 	All document contents except metadata	మెటాడేటా తప్ప పత్రంలోని మొత్తం కంటెంట్
@@ -1643,7 +1643,6 @@ action wizard	Start	ప్రారంభించు
 	At least one signature has problems.	కనీసం ఒక సంతకంలో సమస్యలు ఉన్నాయి.
 	This document is secured. Some changes are restricted by its security settings.	ఈ పత్రం రక్షించబడింది. దీని భద్రతా సెట్టింగ్‌లు కొన్ని మార్పులను పరిమితం చేస్తాయి.
 	This is a dynamic XFA form, which PdfCraft can't display yet. What you see is the file's placeholder page.	ఇది డైనమిక్ XFA ఫారం, దీన్ని ప్రదర్శించడానికి PdfCraftలో ఇంకా మద్దతు లేదు. మీరు చూస్తున్నది ఫైల్‌లోని ప్లేస్‌హోల్డర్ పేజీ.
-	This form also contains XFA data, which PdfCraft doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	ఈ ఫారంలో XFA డేటా కూడా ఉంది, దాన్ని చదవడానికి PdfCraftలో ఇంకా మద్దతు లేదు. మీరు దీని ఫీల్డ్‌లను నింపవచ్చు, కానీ Acrobat బదులుగా XFA విలువలను చూపించవచ్చు.
 	This document contains {n} interactive form fields.	ఈ పత్రంలో {n} ఇంటరాక్టివ్ ఫారం ఫీల్డ్‌లు ఉన్నాయి.
 	This file was damaged and has been repaired. Saving keeps the repaired version.	ఈ ఫైల్ పాడైంది, దాన్ని సరిచేయడం జరిగింది. సేవ్ చేస్తే సరిచేసిన వెర్షన్ ఉంచబడుతుంది.
 	Dismiss	మూసివేయి
@@ -1885,7 +1884,7 @@ action wizard	Start	ప్రారంభించు
 	Open email app	ఇమెయిల్ యాప్‌ను తెరువు
 	Open link	లింక్‌ను తెరువు
 	Open this web page?	ఈ వెబ్ పేజీని తెరవాలా?
-	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	స్క్రిప్ట్‌లు ఫైల్ లేదా నెట్‌వర్క్ యాక్సెస్ లేని శాండ్‌బాక్స్‌లో అమలవుతాయి. వెబ్ పేజీని తెరవమని అడిగే స్క్రిప్ట్‌కు ముందుగా మీ అనుమతి అవసరం. JavaScript ఆఫ్‌లో ఉన్నా, Acrobat ప్రామాణిక ఫార్మాట్, ధృవీకరణ, గణన ఫంక్షన్‌లు పని చేస్తూనే ఉంటాయి.
+	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, the standard format, validate and calculate functions still work.	స్క్రిప్ట్‌లు ఫైల్ లేదా నెట్‌వర్క్ యాక్సెస్ లేని శాండ్‌బాక్స్‌లో అమలవుతాయి. వెబ్ పేజీని తెరవమని అడిగే స్క్రిప్ట్‌కు ముందుగా మీ అనుమతి అవసరం. JavaScript ఆఫ్‌లో ఉన్నా, ప్రామాణిక ఫార్మాట్, ధృవీకరణ, గణన ఫంక్షన్‌లు పని చేస్తూనే ఉంటాయి.
 	Sign yourself	స్వయంగా సంతకం చేయడం
 	Text recognition isn't installed: its models are missing (run `cargo xtask models`, or set PDFCRAFT_MODELS).	టెక్స్ట్ గుర్తింపు ఇన్‌స్టాల్ కాలేదు: దాని మోడల్‌లు లేవు (`cargo xtask models` అమలు చేయండి, లేదా PDFCRAFT_MODELS సెట్ చేయండి).
 	Used when opening PDFs. An explicit launch or control mode takes precedence for the session.	PDFలను తెరిచేటప్పుడు ఉపయోగించబడుతుంది. ప్రారంభించేటప్పుడు లేదా కంట్రోల్ ద్వారా స్పష్టంగా ఇచ్చిన మోడ్‌కు ఆ సెషన్‌లో ప్రాధాన్యత ఉంటుంది.

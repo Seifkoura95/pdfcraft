@@ -86,7 +86,7 @@
 	Fit to width	符合寬度
 	Display theme	顯示主題
 	Side panels	側邊面板
-	Enable Acrobat JavaScript	啟用 Acrobat JavaScript
+	Enable JavaScript	啟用 JavaScript
 	OK	確定
 	Cancel	取消
 	Close	關閉
@@ -834,7 +834,7 @@
 	Document JavaScripts	文件 JavaScript
 	Script Name:	指令碼名稱：
 	This document has no document-level scripts.	本文件沒有文件級指令碼。
-	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	指令碼在沙箱中執行，無法存取檔案或網路。關閉 JavaScript 後，Acrobat 的標準格式、驗證與計算函式仍可使用。
+	Scripts run in a sandbox without file or network access. With JavaScript off, the standard format, validate and calculate functions still work.	指令碼在沙箱中執行，無法存取檔案或網路。關閉 JavaScript 後，標準格式、驗證與計算函式仍可使用。
 	No form fields were detected	未偵測到表單欄位
 	Detected 1 form field	偵測到 1 個表單欄位
 	Detected {n} form fields	偵測到 {n} 個表單欄位
@@ -1216,10 +1216,10 @@
 	Weak	弱
 	Advanced Options {chevron}	高階選項 {chevron}
 	Compatibility	相容性
-	Acrobat X and later (256-bit AES)	Acrobat X 及更高版本（256 位 AES）
-	Acrobat 7.0 and later (128-bit AES)	Acrobat 7.0 及更高版本（128 位 AES）
-	Acrobat 5.0 and later (128-bit RC4)	Acrobat 5.0 及更高版本（128 位 RC4）
-	Acrobat 3.0 and later (40-bit RC4)	Acrobat 3.0 及更高版本（40 位 RC4）
+	PDF 2.0 and later (256-bit AES)	PDF 2.0 及更高版本（256 位 AES）
+	PDF 1.6 and later (128-bit AES)	PDF 1.6 及更高版本（128 位 AES）
+	PDF 1.4 and later (128-bit RC4)	PDF 1.4 及更高版本（128 位 RC4）
+	PDF 1.1 and later (40-bit RC4)	PDF 1.1 及更高版本（40 位 RC4）
 	Encrypt	加密
 	All document contents	所有文件內容
 	All document contents except metadata	除中繼資料外的所有文件內容
@@ -1631,7 +1631,6 @@
 	At least one signature has problems.	至少一個簽名存在問題。
 	This document is secured. Some changes are restricted by its security settings.	本文件已加密。其安全設定限制了部分更改。
 	This is a dynamic XFA form, which PdfCraft can't display yet. What you see is the file's placeholder page.	這是動態 XFA 表單，PdfCraft 暫無法顯示。您看到的是檔案的佔位頁面。
-	This form also contains XFA data, which PdfCraft doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	此表單還包含 XFA 資料，PdfCraft 暫不讀取。您可以填寫欄位，但 Acrobat 可能顯示 XFA 值。
 	This document contains {n} interactive form fields.	本文件包含 {n} 個互動式表單欄位。
 	This file was damaged and has been repaired. Saving keeps the repaired version.	此檔案已損壞並已修復。儲存將保留修復後的版本。
 	Dismiss	關閉
@@ -1725,7 +1724,7 @@
 	PdfCraft works offline. No telemetry, no account, and no cloud processing unless you add a provider.	PdfCraft 可離線使用，不收集遙測資料，也不需要帳號。只有在您新增服務供應商後，才會使用雲端處理。
 	Double-click	滑鼠按兩下
 	PDF/A…	PDF/A…
-	Microsoft Word (.docx)	Microsoft Word（.docx）
+	Document (.docx)	文件（.docx）
 	Spreadsheet (.xlsx)	試算表（.xlsx）
 	Presentation (.pptx)	簡報（.pptx）
 	PostScript / EPS	PostScript / EPS

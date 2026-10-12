@@ -57,7 +57,7 @@
 	Fit to width	Ajuster à la largeur
 	Display theme	Thème d'affichage
 	Side panels	Panneaux latéraux
-	Enable Acrobat JavaScript	Activer Acrobat JavaScript
+	Enable JavaScript	Activer JavaScript
 	OK	OK
 	Join our Discord	Rejoindre notre Discord
 	Close	Fermer
@@ -130,7 +130,7 @@
 	Files you open in PdfCraft appear here. Drop a PDF anywhere to open it.	Les fichiers que vous ouvrez dans PdfCraft apparaissent ici. Déposez un PDF n'importe où pour l'ouvrir.
 	Privacy	Confidentialité
 	PdfCraft works offline. No telemetry, no account, and no cloud processing unless you add a provider.	PdfCraft fonctionne hors ligne. Pas de télémétrie, pas de compte, et aucun traitement dans le cloud sauf si vous ajoutez un fournisseur.
-	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	Les scripts s'exécutent dans un bac à sable, sans accès aux fichiers ni au réseau. Si JavaScript est désactivé, les fonctions standard de format, de validation et de calcul d'Acrobat continuent de fonctionner.
+	Scripts run in a sandbox without file or network access. With JavaScript off, the standard format, validate and calculate functions still work.	Les scripts s'exécutent dans un bac à sable, sans accès aux fichiers ni au réseau. Si JavaScript est désactivé, les fonctions standard de format, de validation et de calcul continuent de fonctionner.
 	Back to all tools	Retour à tous les outils
 	Close panel	Fermer le panneau
 	View less	Voir moins
@@ -270,7 +270,7 @@
 	About PdfCraft	À propos de PdfCraft
 	Export a PDF	Exporter un PDF
 	Export to	Exporter vers
-	Microsoft Word (.docx)	Microsoft Word (.docx)
+	Document (.docx)	Document (.docx)
 	Spreadsheet (.xlsx)	Feuille de calcul (.xlsx)
 	Presentation (.pptx)	Présentation (.pptx)
 	Image (PNG)	Image (PNG)
@@ -1290,10 +1290,10 @@
 	Weak	Faible
 	Advanced Options {chevron}	Options avancées {chevron}
 	Compatibility	Compatibilité
-	Acrobat X and later (256-bit AES)	Acrobat X et versions ultérieures (AES 256 bits)
-	Acrobat 7.0 and later (128-bit AES)	Acrobat 7.0 et versions ultérieures (AES 128 bits)
-	Acrobat 5.0 and later (128-bit RC4)	Acrobat 5.0 et versions ultérieures (RC4 128 bits)
-	Acrobat 3.0 and later (40-bit RC4)	Acrobat 3.0 et versions ultérieures (RC4 40 bits)
+	PDF 2.0 and later (256-bit AES)	PDF 2.0 et versions ultérieures (AES 256 bits)
+	PDF 1.6 and later (128-bit AES)	PDF 1.6 et versions ultérieures (AES 128 bits)
+	PDF 1.4 and later (128-bit RC4)	PDF 1.4 et versions ultérieures (RC4 128 bits)
+	PDF 1.1 and later (40-bit RC4)	PDF 1.1 et versions ultérieures (RC4 40 bits)
 	Encrypt	Chiffrer
 	All document contents	Tout le contenu du document
 	All document contents except metadata	Tout le contenu du document sauf les métadonnées
@@ -1639,7 +1639,6 @@
 	At least one signature has problems.	Au moins une signature pose problème.
 	This document is secured. Some changes are restricted by its security settings.	Ce document est protégé. Sa protection restreint certaines modifications.
 	This is a dynamic XFA form, which PdfCraft can't display yet. What you see is the file's placeholder page.	Ceci est un formulaire XFA dynamique, que PdfCraft ne peut pas encore afficher. Ce que vous voyez est la page de substitution du fichier.
-	This form also contains XFA data, which PdfCraft doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	Ce formulaire contient aussi des données XFA, que PdfCraft ne lit pas encore. Vous pouvez remplir ses champs, mais Acrobat peut afficher les valeurs XFA à la place.
 	This document contains {n} interactive form fields.	Ce document contient {n} champs de formulaire interactifs.
 	This file was damaged and has been repaired. Saving keeps the repaired version.	Ce fichier était endommagé et a été réparé. L'enregistrement conserve la version réparée.
 	Dismiss	Fermer
@@ -1881,7 +1880,7 @@
 	Open email app	Ouvrir l'application de courrier
 	Open link	Ouvrir le lien
 	Open this web page?	Ouvrir cette page web ?
-	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	Les scripts s'exécutent dans un bac à sable, sans accès aux fichiers ni au réseau. Un script qui demande d'ouvrir une page web a d'abord besoin de votre autorisation. Si JavaScript est désactivé, les fonctions standard de format, de validation et de calcul d'Acrobat continuent de fonctionner.
+	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, the standard format, validate and calculate functions still work.	Les scripts s'exécutent dans un bac à sable, sans accès aux fichiers ni au réseau. Un script qui demande d'ouvrir une page web a d'abord besoin de votre autorisation. Si JavaScript est désactivé, les fonctions standard de format, de validation et de calcul continuent de fonctionner.
 	Sign yourself	Signer soi-même
 	Text recognition isn't installed: its models are missing (run `cargo xtask models`, or set PDFCRAFT_MODELS).	La reconnaissance de texte n'est pas installée : ses modèles sont absents (exécutez `cargo xtask models`, ou définissez PDFCRAFT_MODELS).
 	Used when opening PDFs. An explicit launch or control mode takes precedence for the session.	Utilisé à l'ouverture des PDF. Un mode de lancement ou de contrôle explicite a priorité pour la session.

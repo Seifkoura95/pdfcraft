@@ -660,7 +660,7 @@ pub fn tools() -> Vec<ToolDef> {
                 "changes": { "type": "string", "enum": ["none", "pages", "fill-sign", "comment-fill-sign", "any-except-extract"], "description": "Needs permissions_password. Default none." },
                 "copy": { "type": "boolean", "description": "Allow copying text and images (needs permissions_password; default false)." },
                 "accessibility": { "type": "boolean", "description": "Allow screen readers to read the text (needs permissions_password; default true)." },
-                "compatibility": { "type": "string", "enum": ["aes-256", "aes-128", "rc4-128", "rc4-40"], "description": "Default aes-256 (Acrobat X and later)." },
+                "compatibility": { "type": "string", "enum": ["aes-256", "aes-128", "rc4-128", "rc4-40"], "description": "Default aes-256 (PDF 2.0 and later)." },
                 "encrypt_metadata": { "type": "boolean", "description": "Default true." },
             }),
             &["doc"],
@@ -862,7 +862,7 @@ pub fn tools() -> Vec<ToolDef> {
                     "hide": { "type": "array", "items": { "type": "string" } }, "submit": { "type": "string" } }, "required": ["trigger"] } } }),
                 &["doc", "field", "actions"],
             )),
-        t("js_enabled", "JavaScript on or off", "Preferences ▸ JavaScript ▸ Enable Acrobat JavaScript: set it with `enabled`, or read it. With JavaScript off, field scripts other than Acrobat's AF calls don't run.")
+        t("js_enabled", "JavaScript on or off", "Preferences ▸ JavaScript ▸ Enable JavaScript: set it with `enabled`, or read it. With JavaScript off, field scripts other than Acrobat's AF calls don't run.")
             .with(schema(json!({ "enabled": { "type": "boolean" } }), &[])),
         t("ocr_recognize", "Recognize text (OCR)", "Scan & OCR ▸ Recognize text: render pages, read the words in them and add them as invisible text over the page image, so scanned pages become searchable and selectable (a searchable image; the image is not changed). Pages that already have text are skipped unless skip_text_pages is false. Returns each page's recognised text, word count or why it was skipped. Needs the OCR models (ocr_status). Undoable as one step.")
             .cmd("ocr.recognize")

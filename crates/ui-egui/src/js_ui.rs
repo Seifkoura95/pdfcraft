@@ -308,11 +308,11 @@ pub(crate) fn preferences_body(ui: &mut egui::Ui, app: &mut PdfCraftApp, t: &Tok
     egui::Frame::new().fill(t.hover).corner_radius(egui::CornerRadius::same(6)).inner_margin(egui::Margin::same(10)).show(ui, |ui| {
         ui.set_width(ui.available_width());
         let mut on = app.session.javascript();
-        if ui.checkbox(&mut on, tl!("Enable Acrobat JavaScript")).changed() {
+        if ui.checkbox(&mut on, tl!("Enable JavaScript")).changed() {
             app.session.set_javascript(on);
         }
         ui.label(
-            egui::RichText::new(tl!("Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, Acrobat's standard format, validate and calculate functions still work."))
+            egui::RichText::new(tl!("Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, the standard format, validate and calculate functions still work."))
                 .small()
                 .color(t.text_muted),
         );

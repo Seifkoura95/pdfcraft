@@ -20,3 +20,7 @@ thiserror = { workspace = true }
 [dev-dependencies]
 image = { version = "0.25", default-features = false, features = ["bmp", "gif"] }
 hayro-syntax = { workspace = true }
+
+[features]
+# SimpleHub build: metadata written into files names Simple PDF.
+simplehub = []

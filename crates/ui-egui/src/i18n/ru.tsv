@@ -75,7 +75,7 @@
 	Fit to width	По ширине
 	Display theme	Тема оформления
 	Side panels	Боковые панели
-	Enable Acrobat JavaScript	Включить Acrobat JavaScript
+	Enable JavaScript	Включить JavaScript
 	OK	OK
 	Join our Discord	Присоединяйтесь к нашему Discord
 	Close	Закрыть
@@ -148,7 +148,7 @@
 	Files you open in PdfCraft appear here. Drop a PDF anywhere to open it.	Файлы, которые вы открываете в PdfCraft, появляются здесь. Перетащите PDF в любое место, чтобы открыть.
 	Privacy	Конфиденциальность
 	PdfCraft works offline. No telemetry, no account, and no cloud processing unless you add a provider.	PdfCraft работает офлайн. Без телеметрии, аккаунтов и облачной обработки, если вы не добавите провайдера.
-	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	Скрипты выполняются в песочнице без доступа к файлам и сети. При отключённом JavaScript стандартные функции Acrobat форматирования, проверки и вычислений всё равно работают.
+	Scripts run in a sandbox without file or network access. With JavaScript off, the standard format, validate and calculate functions still work.	Скрипты выполняются в песочнице без доступа к файлам и сети. При отключённом JavaScript стандартные функции форматирования, проверки и вычислений всё равно работают.
 	Back to all tools	Назад ко всем инструментам
 	Close panel	Закрыть панель
 	View less	Показать меньше
@@ -288,7 +288,7 @@
 	About PdfCraft	О программе PdfCraft
 	Export a PDF	Экспортировать PDF
 	Export to	Экспортировать в
-	Microsoft Word (.docx)	Microsoft Word (.docx)
+	Document (.docx)	Документ (.docx)
 	Spreadsheet (.xlsx)	Электронная таблица (.xlsx)
 	Presentation (.pptx)	Презентация (.pptx)
 	Image (PNG)	Изображение (PNG)
@@ -1309,10 +1309,10 @@
 	Weak	Низкая
 	Advanced Options {chevron}	Дополнительные параметры {chevron}
 	Compatibility	Совместимость
-	Acrobat X and later (256-bit AES)	Acrobat X и новее (256-битный AES)
-	Acrobat 7.0 and later (128-bit AES)	Acrobat 7.0 и новее (128-битный AES)
-	Acrobat 5.0 and later (128-bit RC4)	Acrobat 5.0 и новее (128-битный RC4)
-	Acrobat 3.0 and later (40-bit RC4)	Acrobat 3.0 и новее (40-битный RC4)
+	PDF 2.0 and later (256-bit AES)	PDF 2.0 и новее (256-битный AES)
+	PDF 1.6 and later (128-bit AES)	PDF 1.6 и новее (128-битный AES)
+	PDF 1.4 and later (128-bit RC4)	PDF 1.4 и новее (128-битный RC4)
+	PDF 1.1 and later (40-bit RC4)	PDF 1.1 и новее (40-битный RC4)
 	Encrypt	Шифровать
 	All document contents	Всё содержимое документа
 	All document contents except metadata	Всё содержимое документа, кроме метаданных
@@ -1704,7 +1704,6 @@
 	At least one signature has problems.	Хотя бы одна подпись имеет проблемы.
 	This document is secured. Some changes are restricted by its security settings.	Этот документ защищён. Некоторые изменения ограничены его настройками безопасности.
 	This is a dynamic XFA form, which PdfCraft can't display yet. What you see is the file's placeholder page.	Это динамическая форма XFA, которую PdfCraft пока не может отобразить. То, что вы видите, — заглушка страницы файла.
-	This form also contains XFA data, which PdfCraft doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	Эта форма также содержит данные XFA, которые PdfCraft пока не читает. Вы можете заполнить её поля, но Acrobat может показать значения XFA вместо них.
 	This document contains {n} interactive form fields.	Этот документ содержит {n} интерактивных полей формы.
 	This file was damaged and has been repaired. Saving keeps the repaired version.	Этот файл был повреждён и восстановлен. Сохранение сохраняет восстановленную версию.
 	Dismiss	Закрыть
@@ -1946,7 +1945,7 @@
 	Open email app	Открыть почтовое приложение
 	Open link	Открыть ссылку
 	Open this web page?	Открыть эту веб-страницу?
-	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	Скрипты выполняются в песочнице без доступа к файлам и сети. Скрипт, который просит открыть веб-страницу, сначала нуждается в вашем разрешении. При отключённом JavaScript стандартные функции Acrobat форматирования, проверки и вычислений всё равно работают.
+	Scripts run in a sandbox without file or network access. A script that asks to open a web page needs your permission first. With JavaScript off, the standard format, validate and calculate functions still work.	Скрипты выполняются в песочнице без доступа к файлам и сети. Скрипт, который просит открыть веб-страницу, сначала нуждается в вашем разрешении. При отключённом JavaScript стандартные функции форматирования, проверки и вычислений всё равно работают.
 	Sign yourself	Подписать самим собой
 	Text recognition isn't installed: its models are missing (run `cargo xtask models`, or set PDFCRAFT_MODELS).	Распознавание текста не установлено: отсутствуют модели (запустите `cargo xtask models` или задайте PDFCRAFT_MODELS).
 	Used when opening PDFs. An explicit launch or control mode takes precedence for the session.	Используется при открытии PDF. Явный запуск или режим управления имеет приоритет для сессии.

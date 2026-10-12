@@ -39,6 +39,9 @@ pub struct DigestCache {
 /// (end of first range, start of second, end of second, algorithm, fingerprint).
 type RangeKey = (usize, usize, usize, DigestAlg, [u8; 32]);
 
+/// The signing application named in a signature's `/Prop_Build /App`: the SimpleHub build names Simple PDF.
+const APP_NAME: &str = if cfg!(feature = "simplehub") { "Simple PDF" } else { "PdfCraft" };
+
 /// 64 KiB sampled from across `covered`, plus its length.
 fn fingerprint(covered: &[u8]) -> [u8; 32] {
     let mut parts: Vec<&[u8]> = (0..64)
@@ -1013,7 +1016,7 @@ fn sign_inner(
         }
     }
     let mut app = Dict::new();
-    app.set(b"Name".to_vec(), Object::name("PdfCraft"));
+    app.set(b"Name".to_vec(), Object::name(APP_NAME));
     let mut build = Dict::new();
     build.set(b"App".to_vec(), Object::Dict(app));
     v.set(b"Prop_Build".to_vec(), Object::Dict(build));
@@ -1176,7 +1179,7 @@ pub fn timestamp_document(doc: &Document, tsa: &dyn crate::timestamp::TimestampA
     v.set(b"Contents".to_vec(), Object::String(PdfString { bytes: vec![0; TOKEN_RESERVE], hex: true }));
     v.set(b"M".to_vec(), PdfString::literal(date.as_bytes().to_vec()));
     let mut app = Dict::new();
-    app.set(b"Name".to_vec(), Object::name("PdfCraft"));
+    app.set(b"Name".to_vec(), Object::name(APP_NAME));
     let mut build = Dict::new();
     build.set(b"App".to_vec(), Object::Dict(app));
     v.set(b"Prop_Build".to_vec(), Object::Dict(build));

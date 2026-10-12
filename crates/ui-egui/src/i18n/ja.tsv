@@ -83,7 +83,7 @@
 	Fit to width	幅に合わせる
 	Display theme	表示テーマ
 	Side panels	サイドパネル
-	Enable Acrobat JavaScript	Acrobat JavaScript を有効にする
+	Enable JavaScript	JavaScript を有効にする
 	OK	OK
 	Join our Discord	Discord に参加
 	Close	閉じる
@@ -156,7 +156,7 @@
 	Files you open in PdfCraft appear here. Drop a PDF anywhere to open it.	PdfCraft で開いたファイルがここに表示されます。PDF をウィンドウにドロップして開くこともできます。
 	Privacy	プライバシー
 	PdfCraft works offline. No telemetry, no account, and no cloud processing unless you add a provider.	PdfCraft はオフラインで動作します。使用状況の送信やアカウント登録はありません。サービス提供元を追加しない限り、クラウド処理も行いません。
-	Scripts run in a sandbox without file or network access. With JavaScript off, Acrobat's standard format, validate and calculate functions still work.	スクリプトはファイルやネットワークにアクセスできないサンドボックスで実行されます。JavaScript を無効にしても、Acrobat の標準の書式設定・検証・計算関数は使用できます。
+	Scripts run in a sandbox without file or network access. With JavaScript off, the standard format, validate and calculate functions still work.	スクリプトはファイルやネットワークにアクセスできないサンドボックスで実行されます。JavaScript を無効にしても、標準の書式設定・検証・計算関数は使用できます。
 	Back to all tools	すべてのツールに戻る
 	Close panel	パネルを閉じる
 	View less	表示を減らす
@@ -296,7 +296,7 @@
 	About PdfCraft	PdfCraft について
 	Export a PDF	PDF を書き出す
 	Export to	書き出し形式
-	Microsoft Word (.docx)	Microsoft Word（.docx）
+	Document (.docx)	文書（.docx）
 	Spreadsheet (.xlsx)	スプレッドシート（.xlsx）
 	Presentation (.pptx)	プレゼンテーション（.pptx）
 	Image (PNG)	画像（PNG）
@@ -1317,10 +1317,10 @@
 	Weak	弱い
 	Advanced Options {chevron}	詳細オプション {chevron}
 	Compatibility	互換性
-	Acrobat X and later (256-bit AES)	Acrobat X 以降（256 ビット AES）
-	Acrobat 7.0 and later (128-bit AES)	Acrobat 7.0 以降（128 ビット AES）
-	Acrobat 5.0 and later (128-bit RC4)	Acrobat 5.0 以降（128 ビット RC4）
-	Acrobat 3.0 and later (40-bit RC4)	Acrobat 3.0 以降（40 ビット RC4）
+	PDF 2.0 and later (256-bit AES)	PDF 2.0 以降（256 ビット AES）
+	PDF 1.6 and later (128-bit AES)	PDF 1.6 以降（128 ビット AES）
+	PDF 1.4 and later (128-bit RC4)	PDF 1.4 以降（128 ビット RC4）
+	PDF 1.1 and later (40-bit RC4)	PDF 1.1 以降（40 ビット RC4）
 	Encrypt	暗号化
 	All document contents	文書のすべての内容
 	All document contents except metadata	メタデータ以外のすべての内容
@@ -1722,7 +1722,6 @@
 	At least one signature has problems.	問題のある署名があります。
 	This document is secured. Some changes are restricted by its security settings.	この文書は保護されています。セキュリティ設定により一部の変更が制限されています。
 	This is a dynamic XFA form, which PdfCraft can't display yet. What you see is the file's placeholder page.	この文書は動的 XFA フォームで、PdfCraft はまだ表示できません。現在はファイルの代替ページを表示しています。
-	This form also contains XFA data, which PdfCraft doesn't read yet. You can fill its fields, but Acrobat may show the XFA values instead.	このフォームには PdfCraft がまだ読み取れない XFA データも含まれます。フィールドには入力できますが、Acrobat は代わりに XFA の値を表示する場合があります。
 	This document contains {n} interactive form fields.	この文書には対話型フォームフィールドが {n} 個あります。
 	This file was damaged and has been repaired. Saving keeps the repaired version.	このファイルは破損していたため修復しました。保存すると修復済みの状態が保持されます。
 	Dismiss	閉じる

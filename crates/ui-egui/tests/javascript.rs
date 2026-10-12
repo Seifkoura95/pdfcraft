@@ -93,7 +93,7 @@ fn document_scripts_and_preferences() {
     assert_eq!(h.state().session.get(id).unwrap().document_scripts()[0].0, "init");
     h.state_mut().dialog = Some(Dialog::Preferences);
     h.run_steps(2);
-    h.get_by_label("Enable Acrobat JavaScript").click();
+    h.get_by_label("Enable JavaScript").click();
     h.run_steps(2);
     assert!(!h.state().session.javascript());
     let saved = h.state().persist();
